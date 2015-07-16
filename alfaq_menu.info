@@ -1,0 +1,3 @@
+name = "Alfaq menu and permission"
+description = "test menu and permission module"
+core = 7.x

@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * myblock.module
+ */
+
+function alfaq_menu_menu() {
+    $items['alfaqmenu'] = array(
+        'title' => 'My page',
+        'type' => MENU_NORMAL_ITEM,
+        'page callback' => 'alfaq_menu_view',
+        'access arguments' => array('access mypage'),
+    );
+    return $items;
+}
+
+function alfaq_menu_view() {
+    return "this is my page for drupal";
+}
+
+//настрйока доступа к странице
+function alfaq_menu_permission() {
+    return array(
+        'alfaq menu' => array(
+            'title' => t('Alfaq menu'),
+            'description' => t('Perform administration tasks for my module.'),
+        ),
+    );
+}
