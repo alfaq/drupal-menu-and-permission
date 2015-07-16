@@ -9,6 +9,7 @@ function alfaq_menu_menu() {
     $items['alfaqmenu'] = array(
         'title' => 'My page',
         'type' => MENU_NORMAL_ITEM,
+        'menu_name' => 'main-menu',
         'page callback' => 'alfaq_menu_view',
         'access arguments' => array('access mypage'),
     );
